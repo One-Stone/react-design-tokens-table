@@ -10,11 +10,19 @@
 		"build": "rollup -c",
 		"watch": "rollup -cw"
 	},
-	"keywords": ["design", "tokens", "token", "table", "viewer", "react"],
-  "author": {
-    "name": "nob3110",
-    "url": "https://one-stone.co.jp"
-  },
+	"keywords": [
+		"design",
+		"tokens",
+		"token",
+		"table",
+		"viewer",
+		"react"
+	],
+	"author": {
+		"name": "nob3110",
+		"url": "https://one-stone.co.jp"
+	},
+	"repository": "github:One-Stone/react-design-tokens-table",
 	"license": "MIT",
 	"devDependencies": {
 		"@rollup/plugin-commonjs": "^22.0.1",
