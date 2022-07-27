@@ -22,12 +22,13 @@ export default [
 				sourcemap: true,
 			},
 		],
+		external: ['react'],
 		plugins: [
-			typescript({ tsconfig: './tsconfig.json' }),
-			commonjs(),
-			resolve(),
-			terser(),
 			external(),
+			resolve(),
+			commonjs(),
+			typescript({ tsconfig: './tsconfig.json' }),
+			terser(),
 		],
 	},
 	{
