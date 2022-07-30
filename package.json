@@ -36,11 +36,14 @@
 	"keywords": [
 		"design tokens",
 		"design token",
-		"design",
-		"tokens",
-		"token",
+		"storybook",
 		"table",
+		"preview",
+		"visualize",
 		"viewer",
 		"react"
-	]
+	],
+	"dependencies": {
+		"@stitches/react": "^1.2.8"
+	}
 }
