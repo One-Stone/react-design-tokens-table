@@ -6,7 +6,8 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"build-storybook": "build-storybook",
+		"style-dictionary": "npx style-dictionary build -c ./.style_dictionary/config.json"
 	},
 	"keywords": [],
 	"author": "",
@@ -22,7 +23,9 @@
 		"@storybook/react": "^6.5.9",
 		"@storybook/testing-library": "^0.0.13",
 		"babel-loader": "^8.2.5",
-		"react-design-tokens-table": "^0.0.5"
+		"style-dictionary": "^3.7.1"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"react-design-tokens-table": "^0.0.7"
+	}
 }
