@@ -7,55 +7,56 @@ import { styled } from '@stitches/react'
 export const DesignTokensTable = (props: DesignTokensTableType) => {
 	const [rows, setRows] = useState<JSX.Element[]>([])
 
+	const row = (token: DesignTokensTableType['tokens']) => {
+		setRows((r) => [
+			...r,
+			<tr key={`${token.name}.${token.path?.join('.')}`}>
+				<td className='no-wrap'>
+					{typeof token.name === 'string' && token.name}
+				</td>
+				<td>{token.comment?.toString()}</td>
+				<td className='no-wrap'>
+					<span className='code'>{token.path?.join('.')}</span>
+				</td>
+				<td>
+					<span className='code'>
+						{typeof token.value === 'string' && token.value}
+						{typeof token.value === typeof JSON && JSON.stringify(token.value)}
+					</span>
+				</td>
+				<td>
+					{typeof token.type === 'string' && (
+						<Preview type={token.type} value={JSON.stringify(token.value)} />
+					)}
+				</td>
+			</tr>,
+		])
+	}
+
 	const parse = (
 		tokens: DesignTokensTableType['tokens'],
 		path?: string[]
 	): void => {
 		if (Object.keys(tokens).length === 0) return
-		Object.keys(tokens).forEach((key, index) => {
+
+		if ('value' in tokens && 'name' in tokens && 'type' in tokens)
+			return row(tokens)
+
+		for (const key in tokens) {
 			const token = tokens[key]
-			if ('value' in token && 'name' in token && 'type' in token) {
-				setRows((r) => [
-					...r,
-					<tr key={`${index}:${token.name}`}>
-						{/* <td>{index}</td> */}
-						<td className='no-wrap'>
-							{typeof token.name === 'string' && token.name}
-						</td>
-						<td>{token.comment?.toString()}</td>
-						<td className='no-wrap'>
-							<span className='code'>{token.path?.join('.')}</span>
-						</td>
-						<td>
-							<span className='code'>
-								{typeof token.value === 'string' && token.value}
-								{typeof token.value === typeof JSON &&
-									JSON.stringify(token.value)}
-							</span>
-						</td>
-						<td>
-							{typeof token.type === 'string' && (
-								<Preview
-									type={token.type}
-									value={JSON.stringify(token.value)}
-								/>
-							)}
-						</td>
-					</tr>,
-				])
-			} else {
-				parse(tokens[key], path?.concat(key))
-			}
-		})
+			if ('value' in token && 'name' in token && 'type' in token) row(token)
+			else parse(tokens[key], path?.concat(key))
+		}
 	}
 
 	useEffect(() => {
 		setRows([])
+		console.log(props.noStyle)
 		parse(props.tokens)
 	}, [props.tokens])
 
-	return (
-		<StyledTable css={props.css}>
+	const tableContent = (
+		<>
 			<thead>
 				<tr>
 					<th>Name</th>
@@ -66,10 +67,16 @@ export const DesignTokensTable = (props: DesignTokensTableType) => {
 				</tr>
 			</thead>
 			<tbody>{rows}</tbody>
-		</StyledTable>
+		</>
+	)
+	return props.noStyle ? (
+		<Table css={props.css}>{tableContent}</Table>
+	) : (
+		<StyledTable css={props.css}>{tableContent}</StyledTable>
 	)
 }
 
+const Table = styled('table', {})
 const StyledTable = styled('table', {
 	tableLayout: 'auto',
 	borderCollapse: 'collapse',
