@@ -46,12 +46,12 @@ export const Preview = ({ type, value }: PreviewType) => {
 			)}
 			{type === 'sizing' && <Sizing css={{ width: `calc(${parsedValue})` }} />}
 			{type === 'fontFamilies' && (
-				<FontFamilies
+				<FontFamily
 					css={{
 						fontFamily: parsedValue,
 					}}>
 					Lorem ipsum
-				</FontFamilies>
+				</FontFamily>
 			)}
 			{type === 'fontSizes' && (
 				<FontSize
@@ -164,7 +164,7 @@ const Sizing = styled('div', {
 	},
 })
 
-const FontFamilies = styled('span', {
+const FontFamily = styled('span', {
 	whiteSpace: 'nowrap',
 })
 

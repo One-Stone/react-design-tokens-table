@@ -4,10 +4,17 @@ Visualize design tokens. Dynamically insert beautiful tables of design tokens in
 
 [DEMO](https://react-design-tokens-table.netlify.app/)
 
-<img width="1046" alt="スクリーンショット 2022-07-30 14 10 31" src="https://user-images.githubusercontent.com/12825004/181875752-afce1af4-e072-4b46-af14-25a85f12848a.png">
-<img width="1036" alt="スクリーンショット 2022-07-30 14 10 40" src="https://user-images.githubusercontent.com/12825004/181875759-286f6d1e-6c13-4303-aafe-bbb25d0cf44f.png">
-<img width="1032" alt="スクリーンショット 2022-07-30 14 10 50" src="https://user-images.githubusercontent.com/12825004/181875761-fedeaae9-d057-4b98-a5af-f93f486c26c2.png">
-<img width="1048" alt="スクリーンショット 2022-07-30 14 11 25" src="https://user-images.githubusercontent.com/12825004/181875768-5fa57ff7-5b7c-42a4-b20a-5220e543e61c.png">
+| Color                                                                                                                                                                       | Spacing                                                                                                                                                                    |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img width="100%" alt="スクリーンショット 2022-07-30 14 10 31" src="https://user-images.githubusercontent.com/12825004/181875752-afce1af4-e072-4b46-af14-25a85f12848a.png"> | <img width="100%" alt="スクリーンショット 2022-07-31 0 09 01" src="https://user-images.githubusercontent.com/12825004/181920461-c555ca0b-9a73-4910-a888-610f353e5aef.png"> |
+
+| Typography                                                                                                                                                                  | Border                                                                                                                                                                      |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img width="100%" alt="スクリーンショット 2022-07-30 14 11 25" src="https://user-images.githubusercontent.com/12825004/181875768-5fa57ff7-5b7c-42a4-b20a-5220e543e61c.png"> | <img width="100%" alt="スクリーンショット 2022-07-30 14 10 50" src="https://user-images.githubusercontent.com/12825004/181875761-fedeaae9-d057-4b98-a5af-f93f486c26c2.png"> |
+
+| Shadow                                                                                                                                                                     | Opacity                                                                                                                                                                     |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img width="100%" alt="スクリーンショット 2022-07-31 0 08 24" src="https://user-images.githubusercontent.com/12825004/181920525-7aed393a-cfb8-4df0-a87d-85d8f608cb52.png"> | <img width="100%" alt="スクリーンショット 2022-07-30 14 10 40" src="https://user-images.githubusercontent.com/12825004/181875759-286f6d1e-6c13-4303-aafe-bbb25d0cf44f.png"> |
 
 ## 🎨 Previewable Design Tokens
 
@@ -127,6 +134,20 @@ const Page = () => {
 #### Parse Method
 
 The JSON object passed to the component will be parsed into a table as follows.
+
+```json
+color: {
+		brand: {
+			primary: {
+				value: '#16d4c8',
+				type: 'color',
+				description: 'This is the main color.',
+				name: 'ColorBrandPrimary',
+				path: ['color', 'brand', 'primary'],
+			},
+		},
+	},
+```
 
 | Propaty     |     | Table           | Result                                                 |
 | ----------- | --- | --------------- | ------------------------------------------------------ |
