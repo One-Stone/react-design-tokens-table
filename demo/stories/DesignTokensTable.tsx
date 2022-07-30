@@ -4,6 +4,8 @@ import { DesignTokensTable as DesignTokensTableComponent } from 'react-design-to
 /**
  * Primary UI component for user interaction
  */
-export const DesignTokensTable = ({ tokens, css, noStyle, ...props }) => {
-	return <DesignTokensTableComponent tokens={tokens} {...props} />
+export const DesignTokensTable = ({ tokens, css, noStyle }) => {
+	return (
+		<DesignTokensTableComponent tokens={tokens} css={css} noStyle={noStyle} />
+	)
 }

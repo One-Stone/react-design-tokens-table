@@ -62,10 +62,10 @@ LetterSpacing.args = {
 	tokens: tokens.font['letter-spacing'],
 }
 
-// export const LineHeights = Template.bind({})
-// LineHeights.args = {
-// 	tokens: tokens.font['line-height'],
-// }
+export const LineHeights = Template.bind({})
+LineHeights.args = {
+	tokens: tokens.font['line-height'],
+}
 
 export const ParagraphSpacing = Template.bind({})
 ParagraphSpacing.args = {
