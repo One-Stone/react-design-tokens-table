@@ -22,7 +22,7 @@
 		"@storybook/react": "^6.5.9",
 		"@storybook/testing-library": "^0.0.13",
 		"babel-loader": "^8.2.5",
-		"react-design-tokens-table": "file:../"
+		"react-design-tokens-table": "^0.0.5"
 	},
 	"dependencies": {}
 }
