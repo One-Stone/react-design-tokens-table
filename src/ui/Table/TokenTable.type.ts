@@ -1,3 +1,5 @@
+import { CSS } from '@stitches/react'
+
 export type TokenType = {
 	value: string
 	type: string
@@ -23,6 +25,8 @@ export type TokensType = {
 	[key in string]: TokenType | TokensType
 }
 
-export type TableType = {
+export type DesignTokensTableType = {
 	tokens: TokensType
+	css?: CSS
+	noStyle?: boolean
 }

@@ -1,1 +1,2 @@
-export * from './Table';
+export * from './TokenTable'
+export * from './TokenTable.type'
