@@ -168,14 +168,22 @@ const FontFamily = styled('span', {
 	whiteSpace: 'nowrap',
 })
 
-const FontSize = styled('span', { whiteSpace: 'nowrap' })
+const FontSize = styled('span', {
+	whiteSpace: 'nowrap',
+})
 
-const FontWeight = styled('span', { whiteSpace: 'nowrap' })
+const FontWeight = styled('span', {
+	whiteSpace: 'nowrap',
+})
 
-const LetterSpacing = styled('span', { whiteSpace: 'nowrap' })
+const LetterSpacing = styled('span', {
+	whiteSpace: 'nowrap',
+})
 
 const LineHeights = styled('span', {
 	whiteSpace: 'nowrap',
+	position: 'relative',
+	display: 'inline-block',
 	backgroundColor: 'rgba(250, 100, 100, 0.2)',
 })
 
