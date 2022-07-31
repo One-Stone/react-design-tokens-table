@@ -26,6 +26,6 @@
 		"style-dictionary": "^3.7.1"
 	},
 	"dependencies": {
-		"react-design-tokens-table": "^1.0.0"
+		"react-design-tokens-table": "^1.0.1"
 	}
 }
