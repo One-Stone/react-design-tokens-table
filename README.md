@@ -137,16 +137,16 @@ The JSON object passed to the component will be parsed into a table as follows.
 
 ```json
 color: {
-		brand: {
-			primary: {
-				value: '#16d4c8',
-				type: 'color',
-				description: 'This is the main color.',
-				name: 'ColorBrandPrimary',
-				path: ['color', 'brand', 'primary'],
-			},
+	brand: {
+		primary: {
+			value: '#16d4c8',
+			type: 'color',
+			description: 'This is the main color.',
+			name: 'ColorBrandPrimary',
+			path: ['color', 'brand', 'primary'],
 		},
 	},
+}
 ```
 
 | Propaty     |     | Table           | Result                                                 |
@@ -196,6 +196,7 @@ import tokens from './tokens' //👈
 Upcoming ideas:
 
 - Testing Framework
+- Input form of token's value
 - `JSON` support
 - Other design token properties
 
