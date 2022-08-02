@@ -179,7 +179,7 @@ It is useful to visualize design tokens in a storybook.
 // *.stories.mdx
 
 import { Meta } from '@storybook/addon-docs'
-import { Table } from 'react-design-tokens-table' //👈
+import { DesignTokensTable } from 'react-design-tokens-table' //👈
 import tokens from './tokens' //👈
 
 <Meta title='ReactDesignTokensTableExample' />
