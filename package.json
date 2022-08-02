@@ -1,7 +1,7 @@
 {
 	"name": "react-design-tokens-table",
 	"version": "1.0.1",
-	"description": "",
+	"description": "Visualize design tokens. Dynamically insert beautiful tables of design tokens into your storybook.",
 	"main": "./dist/cjs/index.js",
 	"module": "./dist/esm/index.js",
 	"types": "./dist/index.d.ts",
