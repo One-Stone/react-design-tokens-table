@@ -26,7 +26,7 @@ If you want to see all the examples, check out our [Storybook DEMO](https://reac
 - Box Shadow
 - BorderWidth
 - Border Radius
-- Sizing
+- Sizing / Spacing
 - Font
   - Family
   - Size

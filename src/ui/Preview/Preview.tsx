@@ -45,6 +45,7 @@ export const Preview = ({ type, value }: PreviewType) => {
 				/>
 			)}
 			{type === 'sizing' && <Sizing css={{ width: `calc(${parsedValue})` }} />}
+			{type === 'spacing' && <Sizing css={{ width: `calc(${parsedValue})` }} />}
 			{type === 'fontFamilies' && (
 				<FontFamily
 					css={{
