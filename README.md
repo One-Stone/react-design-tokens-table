@@ -178,15 +178,17 @@ It is useful to visualize design tokens in a storybook.
 ```jsx
 // *.stories.mdx
 
-import { Meta } from '@storybook/addon-docs'
+import { Meta, Unstyled } from '@storybook/addon-docs'
 import { DesignTokensTable } from 'react-design-tokens-table' //👈
 import tokens from './tokens' //👈
+
 
 <Meta title='ReactDesignTokensTableExample' />
 
 # React Design Tokens Table Example
-
-<DesignTokensTable tokens={tokens.color} /> //👈
+<Unstyled> // If you want to resolve conflicts with storybook's default styling
+	<DesignTokensTable tokens={tokens.color} /> //👈
+</Unstyled>
 ```
 
 ---
