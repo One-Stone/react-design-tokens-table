@@ -1,6 +1,6 @@
 {
 	"name": "react-design-tokens-table",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "Visualize design tokens. Dynamically insert beautiful tables of design tokens into your storybook.",
 	"main": "./dist/cjs/index.js",
 	"module": "./dist/esm/index.js",
@@ -44,6 +44,7 @@
 		"react"
 	],
 	"dependencies": {
-		"@stitches/react": "^1.2.8"
+		"@stitches/react": "^1.2.8",
+		"react-json-pretty": "^2.2.0"
 	}
 }

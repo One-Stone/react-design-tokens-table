@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Preview } from '../Preview'
+import JSONPretty from 'react-json-pretty'
 
 import { DesignTokensTableType } from '.'
 import { styled } from '@stitches/react'
@@ -19,10 +20,14 @@ export const DesignTokensTable = (props: DesignTokensTableType) => {
 					<span className='code'>{token.path?.join('.')}</span>
 				</td>
 				<td>
-					<span className='code'>
-						{typeof token.value === 'string' && token.value}
-						{typeof token.value === typeof JSON && JSON.stringify(token.value)}
-					</span>
+					{typeof token.value === 'string' && (
+						<span className='code'>{token.value}</span>
+					)}
+					{typeof token.value === typeof JSON && (
+						<span className='code-box wrap'>
+							<JSONPretty data={token.value} />
+						</span>
+					)}
 				</td>
 				<td>
 					{typeof token.type === 'string' && (
@@ -126,7 +131,17 @@ const StyledTable = styled('table', {
 			'&.no-wrap': {
 				whiteSpace: 'nowrap',
 			},
+			'.wrap': {
+				whiteSpace: 'pre-wrap',
+			},
 			'.code': {
+				background: '#f8f8f8',
+				padding: '2px 5px',
+				border: '1px solid #EEEEEE',
+				borderRadius: '2px',
+			},
+			'.code-box': {
+				display: 'inline-block',
 				background: '#f8f8f8',
 				padding: '2px 5px',
 				border: '1px solid #EEEEEE',

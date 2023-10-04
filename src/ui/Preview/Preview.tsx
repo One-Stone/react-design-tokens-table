@@ -97,6 +97,11 @@ export const Preview = ({ type, value }: PreviewType) => {
 			{type === 'typography' && (
 				<Typography css={{ ...parsedValue }}>Lorem ipsum</Typography>
 			)}
+			{type === 'layout' && (
+				<Layout css={{ ...parsedValue }}>
+					<div>Inner Content</div>
+				</Layout>
+			)}
 		</>
 	)
 }
@@ -191,3 +196,13 @@ const LineHeights = styled('span', {
 const ParagraphSpacing = styled('span', { whiteSpace: 'nowrap' })
 
 const Typography = styled('span', { whiteSpace: 'nowrap' })
+
+const Layout = styled('div', {
+	'> div': {
+		display: 'inline-block',
+		width: '100%',
+		height: '100%',
+		backgroundColor: 'rgba(255, 140, 140, 0.4)',
+		whiteSpace: 'nowrap',
+	},
+})
