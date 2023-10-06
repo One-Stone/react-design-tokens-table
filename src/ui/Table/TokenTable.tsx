@@ -132,7 +132,10 @@ const StyledTable = styled('table', {
 				whiteSpace: 'nowrap',
 			},
 			'.wrap': {
-				whiteSpace: 'pre-wrap',
+				whiteSpace: 'auto',
+				'*': {
+					textWrap: 'wrap !important',
+				},
 			},
 			'.code': {
 				background: '#f8f8f8',
