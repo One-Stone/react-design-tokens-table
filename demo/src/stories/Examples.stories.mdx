@@ -1,0 +1,143 @@
+import { Meta, Description, Unstyled } from '@storybook/addon-docs'
+import { DesignTokensTable } from 'react-design-tokens-table'
+import tokens from './tokens.json'
+
+<Meta title='Examples' />
+
+# Examples
+
+<br />
+
+#### Colors
+
+<Unstyled>
+	<DesignTokensTable tokens={tokens.color} />
+</Unstyled>
+
+<br />
+
+#### Opacities
+
+<Unstyled>
+	<DesignTokensTable tokens={tokens.opacity} />
+</Unstyled>
+
+<br />
+
+#### Shadows
+
+<Unstyled>
+	<DesignTokensTable tokens={tokens.shadow} />
+</Unstyled>
+
+<br />
+
+#### Borders
+
+<Unstyled>
+	<DesignTokensTable tokens={tokens.border} />
+</Unstyled>
+
+<br />
+
+#### Border Radius
+
+<Unstyled>
+	<DesignTokensTable tokens={tokens.radius} />
+</Unstyled>
+
+<br />
+
+#### Spacings
+
+<Unstyled>
+	<DesignTokensTable tokens={tokens.grid} />
+</Unstyled>
+
+<br />
+
+#### Font Families
+
+<Unstyled>
+	<DesignTokensTable tokens={tokens.font.family} />
+</Unstyled>
+
+<br />
+
+#### Font Sizes
+
+<Unstyled>
+	<DesignTokensTable tokens={tokens.font.size} />
+</Unstyled>
+
+<br />
+
+#### Font Weights
+
+<Unstyled>
+	<DesignTokensTable tokens={tokens.font.weight} />
+</Unstyled>
+
+<br />
+
+#### Line Heights
+
+<Unstyled>
+	<DesignTokensTable tokens={tokens.font['line-height']} />
+</Unstyled>
+
+<br />
+
+#### Letter Spacings
+
+<Unstyled>
+	<DesignTokensTable tokens={tokens.font['letter-spacing']} />
+</Unstyled>
+
+<br />
+
+#### Typography
+
+<Unstyled>
+	<DesignTokensTable tokens={tokens.typography} />
+</Unstyled>
+
+<br />
+
+#### Layout
+
+<Unstyled>
+	<DesignTokensTable
+		tokens={{
+			button: {
+				primary: {
+					type: 'layout',
+					description: '',
+					value: {
+						borderRadius: 8,
+						backgroundColor: 'black',
+						padding: '4px 12px',
+						color: 'white',
+						textAlign: 'center',
+					},
+					name: 'LayoutButtonPrimary',
+					path: ['layout', 'button', 'primary'],
+				},
+			},
+			secondary: {
+				type: 'layout',
+				description: '',
+				value: {
+					borderRadius: 8,
+					backgroundColor: 'white',
+					border: '1px solid black',
+					padding: '4px 12px',
+					color: 'black',
+					textAlign: 'center',
+				},
+				name: 'LayoutButtonSecondary',
+				path: ['layout', 'button', 'secondary'],
+			},
+		}}
+	/>
+</Unstyled>

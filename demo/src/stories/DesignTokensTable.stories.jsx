@@ -1,6 +1,6 @@
 import React from 'react'
 import { DesignTokensTable as DesignTokensTableComponent } from './DesignTokensTable'
-import tokens from './tokens'
+import tokens from './tokens.json'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -75,4 +75,39 @@ ParagraphSpacing.args = {
 export const Typography = Template.bind({})
 Typography.args = {
 	tokens: tokens.typography,
+}
+
+export const Layout = Template.bind({})
+Layout.args = {
+	tokens: {
+		button: {
+			primary: {
+				type: 'layout',
+				description: '',
+				value: {
+					borderRadius: 8,
+					backgroundColor: 'black',
+					padding: '4px 12px',
+					color: 'white',
+					textAlign: 'center',
+				},
+				name: 'LayoutButtonPrimary',
+				path: ['layout', 'button', 'primary'],
+			},
+		},
+		secondary: {
+			type: 'layout',
+			description: '',
+			value: {
+				borderRadius: 8,
+				backgroundColor: 'white',
+				border: '1px solid black',
+				padding: '4px 12px',
+				color: 'black',
+				textAlign: 'center',
+			},
+			name: 'LayoutButtonSecondary',
+			path: ['layout', 'button', 'secondary'],
+		},
+	},
 }
