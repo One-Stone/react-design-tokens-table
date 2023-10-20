@@ -7,14 +7,12 @@
 		"dev": "vite",
 		"build": "storybook build",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-		"preview": "vite preview",
-		"storybook": "storybook dev -p 6006",
-		"build-storybook": "storybook build"
+		"preview": "vite preview"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-design-tokens-table": "../"
+		"react-design-tokens-table": "^1.1.0",
+		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"@storybook/addon-essentials": "^7.4.6",
